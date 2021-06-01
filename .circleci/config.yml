@@ -22,3 +22,16 @@ jobs:
       - run:
         command: pytest
   
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - nosetest
+      - pytest:
+          requires:
+                - nosetest
+          filters:
+            branches:
+              only:
+                - develop
