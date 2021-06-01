@@ -1,7 +1,7 @@
 version: 2
 jobs:
   nosetest:
-    working_directory: ~/python-ci
+    working_directoyr: ~/python-ci
     docker:
       - image: circleci/python:3.6.4
     steps:
@@ -9,19 +9,18 @@ jobs:
       - run:
           command: sudo pip install -r requirements.txt
       - run:
-          command: nosetests tests/test-math.py
+          command: nosetests tests/test_math.py
 
   pytest:
-    working_directory: ~/python-ci
+    working_directoyr: ~/python-ci
     docker:
-       - image: circleci/python:3.6.4
+      - image: circleci/python:3.6.4
     steps:
       - checkout
       - run:
-        command: sudo pip install -r requirements.txt
+          command: sudo pip install -r requirements.txt
       - run:
-        command: pytest
-  
+          command: pytest
 
 workflows:
   version: 2
@@ -35,3 +34,4 @@ workflows:
             branches:
               only:
                 - develop
+        
