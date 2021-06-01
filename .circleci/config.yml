@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  nose:
+  nosetest:
     working_directory: ~/python-ci
     docker:
       - image: circleci/python:3.6.4
