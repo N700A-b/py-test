@@ -9,7 +9,7 @@ jobs:
       - run:
           command: sudo pip install -r requirements.txt
       - run:
-          command: nosetests tests/test_math.py
+          command: nosetests tests/test_mathAAAAAAAA.py
 
   pytest:
     working_directory: ~/python-ci
@@ -27,10 +27,9 @@ workflows:
   build_and_test:
     jobs:
       - nosetest
-      - pytest
-#      - pytest:
-#          requires:
-#                - nosetest
+      - pytest:
+          requires:
+                - nosetest
 #          filters:
 #            branches:
 #              only:
