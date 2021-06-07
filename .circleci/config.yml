@@ -27,11 +27,12 @@ workflows:
   build_and_test:
     jobs:
       - nosetest
-      - pytest:
-          requires:
-                - nosetest
-          filters:
-            branches:
-              only:
-                - develop
-        
+      - pytest
+#      - pytest:
+#          requires:
+#                - nosetest
+#          filters:
+#            branches:
+#              only:
+#                - develop
+#        
