@@ -30,8 +30,8 @@ workflows:
       - pytest:
           requires:
                 - nosetest
-#          filters:
-#            branches:
-#              only:
-#                - develop
-#        
+          filters:
+            branches:
+              only:
+                - develop
+        
